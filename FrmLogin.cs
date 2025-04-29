@@ -13,6 +13,8 @@ namespace Login_Master
 {
     public partial class FrmLogin : Form
     {
+        int cont = 0;
+
         database db = new database();
         public FrmLogin()
         {
@@ -63,7 +65,15 @@ namespace Login_Master
                 }
                 else
                 {
+                    cont++;
                     MessageBox.Show("Usuario o contraseña incorrectos");
+
+                    // Si hay demasiados intentos fallidos, cierra el formulario
+                    if (cont == 3)
+                    {
+                        MessageBox.Show("Demasiados intentos incorrectos, inténtelo más tarde :)");
+                        this.Close();
+                    }
                 }
             }
         }
@@ -80,7 +90,14 @@ namespace Login_Master
             }
             else
             {
+                cont++;
                 MessageBox.Show("Usuario o contraseña incorrectos");
+
+                if (cont == 3)
+                {
+                    MessageBox.Show("Demasiados intentos incorrectos, inténtelo más tarde :)");
+                    this.Close();
+                }
             }
         }
     }
