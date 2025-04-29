@@ -36,13 +36,13 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtgClientes = new System.Windows.Forms.DataGridView();
+            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
-            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +89,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtUsuario
             // 
@@ -126,6 +127,27 @@
             this.dtgClientes.Size = new System.Drawing.Size(649, 365);
             this.dtgClientes.TabIndex = 10;
             this.dtgClientes.TabStop = false;
+            // 
+            // IdUsuario
+            // 
+            this.IdUsuario.HeaderText = "IdUsuario";
+            this.IdUsuario.MinimumWidth = 6;
+            this.IdUsuario.Name = "IdUsuario";
+            this.IdUsuario.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
+            // 
+            // Contraseña
+            // 
+            this.Contraseña.HeaderText = "Contraseña";
+            this.Contraseña.MinimumWidth = 6;
+            this.Contraseña.Name = "Contraseña";
+            this.Contraseña.Width = 125;
             // 
             // lblUsuario
             // 
@@ -169,27 +191,6 @@
             this.lblBienvenido.TabIndex = 14;
             this.lblBienvenido.Text = "                                              Cliente                            " +
     "                   ";
-            // 
-            // IdUsuario
-            // 
-            this.IdUsuario.HeaderText = "IdUsuario";
-            this.IdUsuario.MinimumWidth = 6;
-            this.IdUsuario.Name = "IdUsuario";
-            this.IdUsuario.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Contraseña
-            // 
-            this.Contraseña.HeaderText = "Contraseña";
-            this.Contraseña.MinimumWidth = 6;
-            this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Width = 125;
             // 
             // FrmMasterCliente
             // 
