@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,13 @@ namespace Login_Master
 {
     public partial class FrmLogin : Form
     {
+        database db = new database();
         public FrmLogin()
         {
+
             InitializeComponent();
+            database db = new database();
+
         }
 
         private void btnCancel_Click_1(object sender, EventArgs e)
@@ -48,6 +53,34 @@ namespace Login_Master
             if (e.KeyChar == 13)
             {
                 btnOk.PerformClick();
+                string usuario = txtUsuario.Text;
+                string contraseña = txtContraseña.Text;
+
+                if (db.VerificarCredenciales(usuario, contraseña))
+                {
+                    FrmBienvenido bienvenido = new FrmBienvenido();
+                    bienvenido.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                }
+            }
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
+
+            if (db.VerificarCredenciales(usuario, contraseña))
+            {
+                FrmBienvenido bienvenido = new FrmBienvenido();
+                bienvenido.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
             }
         }
     }
