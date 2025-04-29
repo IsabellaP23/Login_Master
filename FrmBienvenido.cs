@@ -16,5 +16,12 @@ namespace Login_Master
         {
             InitializeComponent();
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            FrmMasterCliente cliente = new FrmMasterCliente();
+            cliente.Show();
+            this.Close();
+        }
     }
 }
