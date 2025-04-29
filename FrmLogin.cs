@@ -20,7 +20,7 @@ namespace Login_Master
         {
 
             InitializeComponent();
-            database db = new database();
+            //database db = new database();
 
         }
 
@@ -90,9 +90,9 @@ namespace Login_Master
             }
             else
             {
-                cont++;
+                
                 MessageBox.Show("Usuario o contraseña incorrectos");
-
+                cont++;
                 if (cont == 3)
                 {
                     MessageBox.Show("Demasiados intentos incorrectos, inténtelo más tarde :)");

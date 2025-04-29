@@ -23,12 +23,8 @@ namespace Login_Master
             {
                 SQLiteConnection.CreateFile(dbFile);
                 Console.WriteLine("Base de datos creada.");
+            }
                 CrearTablas();
-            }
-            else
-            {
-                
-            }
         }
 
         private void CrearTablas()
